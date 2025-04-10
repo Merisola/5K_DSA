@@ -1,0 +1,8 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        y = ""
+        for i in str(x):
+            y = i + y 
+
+        return str(x) == y
+        
