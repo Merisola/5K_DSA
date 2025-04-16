@@ -1,0 +1,11 @@
+class Solution:
+    def commonChars(self, words: List[str]) -> List[str]:
+        common = list(words[0])
+        for word in words[1:]:
+            new_common = []
+            for c in common:
+                if c in word:
+                    new_common.append(c)
+                    word = word.replace(c, '', 1) 
+            common = new_common
+        return common
