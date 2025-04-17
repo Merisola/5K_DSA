@@ -1,0 +1,9 @@
+class Solution:
+    def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
+        new_matrix = []
+        for i in range(len(matrix[0])):
+            sub_list = []
+            for j in range(len(matrix)):
+                sub_list.append(matrix[j][i])
+            new_matrix.append(sub_list)
+        return new_matrix
