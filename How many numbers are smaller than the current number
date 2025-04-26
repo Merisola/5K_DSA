@@ -1,0 +1,17 @@
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        sort_nums = sorted(nums)
+        dict_nums = {}
+        sor_arr = []
+        for ind, value in enumerate(sort_nums):
+            if value not in dict_nums:
+                dict_nums[value] = ind
+        
+        for num in nums:
+            sor_arr.append(dict_nums[num])
+        
+        return sor_arr
+
+
+                
+
